@@ -1,2 +1,3 @@
 import { NextResponse } from 'next/server'; import bcrypt from 'bcryptjs'; import { makeSession } from '@/lib/auth';
 export async function POST(req:Request){const {email,password}=await req.json();const validEmail=email===process.env.ADMIN_EMAIL;const stored=process.env.ADMIN_PASSWORD_HASH;const validPassword=stored?await bcrypt.compare(password,stored):password===process.env.ADMIN_PASSWORD;if(!validEmail||!validPassword)return NextResponse.json({error:'Invalid credentials'},{status:401});const r=NextResponse.json({ok:true});r.cookies.set('freshhire_session',await makeSession(email),{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',maxAge:60*60*8,path:'/'});return r}
+

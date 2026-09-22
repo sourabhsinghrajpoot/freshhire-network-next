@@ -1,3 +1,4 @@
 import { z } from 'zod';
 export const jobSchema = z.object({ title:z.string().min(3), company:z.string().min(2), applicationUrl:z.string().url(), location:z.string().min(2), workMode:z.enum(['Remote','Hybrid','On-site']), jobType:z.enum(['Full-time','Internship','Contract']), skills:z.array(z.string()).default([]), experience:z.string().default('Fresher'), salary:z.string().optional(), deadline:z.string().optional(), category:z.string().default('Software Developer'), companyType:z.string().default('Startup'), description:z.string().optional(), requirements:z.string().optional(), featured:z.boolean().default(false), verified:z.boolean().default(false), status:z.enum(['published','draft','expired']).default('published') });
 export const makeSlug = (text:string) => `${text.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}-${Date.now().toString(36)}`;
+

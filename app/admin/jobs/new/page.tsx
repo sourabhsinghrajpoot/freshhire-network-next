@@ -1,1 +1,2 @@
 import { requireAdmin } from '@/lib/auth'; import { JobForm } from '@/components/JobForm'; export default async function New(){await requireAdmin();return <main className="mx-auto max-w-4xl p-5 md:p-10"><h1 className="mb-2 text-3xl font-extrabold">Add new job</h1><p className="mb-7 text-sm text-slate-600">An official application URL is required before publishing.</p><JobForm/></main>}
+

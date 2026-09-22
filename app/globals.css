@@ -1,2 +1,3 @@
 @tailwind base;@tailwind components;@tailwind utilities;
 body{background:#f8fafc;color:#10243c}input,select,textarea{border:1px solid #d9e2ec;border-radius:.55rem;padding:.65rem;width:100%;outline-color:#1769d1}label{display:block;font-size:.78rem;font-weight:700;margin-bottom:.35rem}.btn{border-radius:.5rem;padding:.65rem 1rem;font-weight:700;transition:.2s}.btn-primary{background:#1769d1;color:white}.btn-primary:hover{background:#0c54b0}.card{background:white;border:1px solid #e4ebf2;border-radius:.8rem}.badge{border-radius:99px;background:#edf6ea;color:#287b20;padding:.25rem .5rem;font-size:.68rem;font-weight:700}
+

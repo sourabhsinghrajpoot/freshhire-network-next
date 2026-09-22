@@ -6,3 +6,4 @@ const JobSchema = new Schema({
   applicationUrl:{type:String,required:true}, companyWebsite:String, postedDate:{type:Date,default:Date.now}, deadline:Date, featured:{type:Boolean,default:false}, verified:{type:Boolean,default:false}, status:{type:String,enum:['published','draft','expired'],default:'published'}
 },{timestamps:true});
 export const Job = models.Job || model('Job', JobSchema);
+

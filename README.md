@@ -13,3 +13,4 @@ Production-ready job portal with a protected admin dashboard. Jobs are stored in
 ## Deployment
 
 Deploy on Vercel, Railway, Render, or another Node-compatible host. Add the same environment variables there and configure MongoDB Atlas network access for the host. Never commit `.env.local`.
+

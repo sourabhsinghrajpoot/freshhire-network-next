@@ -1,0 +1,10 @@
+node_modules
+.next
+.env
+.env.local
+data/jobs.json
+server.js
+public/index.html
+public/admin.html
+tsconfig.tsbuildinfo
+
